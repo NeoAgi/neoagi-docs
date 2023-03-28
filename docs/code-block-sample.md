@@ -33,6 +33,19 @@ class HelloWorld {
 }
 ```
 
+```csharp
+
+using System;
+
+namespace Lib {
+
+    public class HelloWorld {
+        public string Name { get; set; }
+    }
+}
+
+```
+
 </TabItem>
 </Tabs>
 
