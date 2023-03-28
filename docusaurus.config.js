@@ -43,7 +43,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/NeoAgi/neoagi-docs/tree/main/docs/',
+            'https://github.com/NeoAgi/neoagi-docs/tree/main/',
         },
         blog: false,
         theme: {
@@ -59,7 +59,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'NeoAgi Docs',
+        title: 'NeoAgi',
         logo: {
           alt: 'NeoAgi Documentation',
           src: 'img/logo.svg',
@@ -69,8 +69,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
+          /** {to: '/', label: 'Docs', position: 'left'}, **/ 
           {
             href: 'https://github.com/NeoAgi/neoagi-docs/',
             className: 'header-github-link',
