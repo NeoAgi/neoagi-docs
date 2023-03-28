@@ -5,10 +5,8 @@ name: Build and Publish Docusaurus Content for docs.neoagi.com
 # Controls when the workflow will run
 on:
   # Triggers the workflow on pull_request to release has been closed
-  pull_request:
+  push:
     branches: [ 'release' ]
-    types: 
-      - closed
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,8 +15,6 @@ on:
 
 jobs:
   merged_release:
-    # Only run this job if the pull request has been merged
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     env:
