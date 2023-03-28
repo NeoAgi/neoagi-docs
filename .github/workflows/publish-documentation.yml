@@ -1,12 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Build and Push NeoAgi.Moneta.Service Lambda Package
+name: Build and Publish Docusaurus Content for docs.neoagi.com
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push of a new tag
-  push:
-    tags: [ 'v*' ] 
+  # Triggers the workflow on pull_request to release has been closed
+  pull_request:
+    branches: [ 'release' ]
+    types: 
+      - closed
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -14,7 +16,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
 jobs:
-  build_image:
+  merged_release:
+    # Only run this job if the pull request has been merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     env:
@@ -49,7 +53,7 @@ jobs:
           aws-region: us-east-2
 
       - name: Push Build
-        run | 
+        run: | 
           cd build
           aws s3 sync . ${{ vars.NEOAGI_DOCUMENTATION_BUCKET_WRITE_KEY_ID }} --delete
         shell: bash
