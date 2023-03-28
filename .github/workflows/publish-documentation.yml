@@ -55,5 +55,5 @@ jobs:
       - name: Push Build
         run: | 
           cd build
-          aws s3 sync . ${{ vars.NEOAGI_DOCUMENTATION_BUCKET_WRITE_KEY_ID }} --delete
+          aws s3 sync . ${{ vars.NEOAGI_DOCUMENTATION_BUCKET_URI }} --delete
         shell: bash
