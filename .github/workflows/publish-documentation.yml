@@ -38,6 +38,7 @@ jobs:
 
       - name: Build Documentation
         run: | 
+          # npm version ${{ env.TAG_NAME }} --no-git-tag-version # Uncomment this once we're passing version number into the action
           npm run build
         shell: bash
 
