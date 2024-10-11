@@ -29,7 +29,7 @@ jobs:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install NPM Dependencies
         run: |
@@ -43,7 +43,7 @@ jobs:
         shell: bash
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.NEOAGI_DOCUMENTATION_BUCKET_WRITE_KEY_ID }}
           aws-secret-access-key: ${{ secrets.NEOAGI_DOCUMENTATION_BUCKET_WRITE_ACCESS_KEY }}
