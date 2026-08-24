@@ -1,0 +1,4 @@
+# Requires review from a NeoAgi org member before merging - pair with
+# GitHub branch protection ("Require review from Code Owners") on both
+# `main` and `release`, configured separately in repo settings.
+* @Habikki
