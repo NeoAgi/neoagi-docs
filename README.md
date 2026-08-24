@@ -12,13 +12,19 @@ contributors anywhere near a repo with deploy credentials).
 
 ## Structure
 
-One top-level folder per site section — these map directly to the sidebar
-groups in `sites-docs.neoagi.com/astro.config.mjs`:
+Content lives under `src/content/docs/`, mirroring
+`sites-docs.neoagi.com`'s own path exactly (not just the folder names) -
+`scripts/sync-content.sh` over there does a straight copy of this directory,
+and Starlight's "Edit page" links are built from that same path, so keeping
+them identical means edit links resolve correctly with no per-page
+overrides needed. One top-level folder per site section, matching the
+sidebar groups in `sites-docs.neoagi.com/astro.config.mjs`:
 
 ```
-documentation/       # end-user product docs (InContext, Kept, ...)
-developer-guides/     # integration guides, API usage, SDK docs
-changelog/            # release notes
+src/content/docs/
+├── documentation/       # end-user product docs (InContext, Kept, ...)
+├── developer-guides/     # integration guides, API usage, SDK docs
+└── changelog/            # release notes
 ```
 
 Subfolders become nested/collapsible sidebar groups automatically. A folder
