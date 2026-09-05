@@ -22,7 +22,7 @@ separate to ensure that your NeoAgi Account doesn't implictly have access to you
 ensuring that only your device has access to your Google Drive data. 
 
 We've designed our authentication flows to be the absolute minimum required to do the job at hand.  
-For example, the Google Drive OAuth Grant's only the [https://developers.google.com/identity/protocols/oauth2/scopes#drive](https://www.googleapis.com/auth/drive.file) scope, limiting access to your Google Drive to only the files and folders Kept has 
+For example, the Google Drive OAuth Grant's only the [https://www.googleapis.com/auth/drive.file](https://developers.google.com/identity/protocols/oauth2/scopes#drive) scope, limiting access to your Google Drive to only the files and folders Kept has 
 created, never access to the full contents in the account.  
 
 While connector logins may feel a bit redundant, we've done this in a way to meet two objectives:
