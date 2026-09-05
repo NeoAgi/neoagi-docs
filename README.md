@@ -4,25 +4,16 @@ Documentation content for [docs.neoagi.com](https://docs.neoagi.com). Plain
 Markdown/MDX, open to public PRs.
 
 This repo is **content only** — no site build, no theme, no deploy pipeline.
-The Astro/Starlight chrome and GitHub Actions deploy workflow live in
-[NeoAgi/sites-docs.neoagi.com](https://github.com/NeoAgi/sites-docs.neoagi.com),
-which pulls content from here at build time. See that repo's README for why
-they're split (short version: once you accept public PRs, you don't want
-contributors anywhere near a repo with deploy credentials).
 
 ## Structure
 
-Content lives under `src/content/docs/`, mirroring
-`sites-docs.neoagi.com`'s own path exactly (not just the folder names) -
-`scripts/sync-content.sh` over there does a straight copy of this directory,
-and Starlight's "Edit page" links are built from that same path, so keeping
-them identical means edit links resolve correctly with no per-page
-overrides needed. One top-level folder per site section, matching the
-sidebar groups in `sites-docs.neoagi.com/astro.config.mjs`:
+Content lives under `src/content/docs/`, and will be pulled in to the hsoted Astro/Starlight 
+frame provided by an internal repository.  Top level sidebar groups must be configured outside 
+of this repository.
 
 ```
 src/content/docs/
-├── documentation/       # end-user product docs (InContext, Kept, ...)
+├── applications/         # end-user product docs (InContext, Kept, ...)
 ├── developer-guides/     # integration guides, API usage, SDK docs
 └── changelog/            # release notes
 ```
@@ -45,11 +36,5 @@ description: One line, used for <meta description> and search results.
 
 - **`main`** — where PRs land. Open one against this branch.
 - **`release`** — what's actually live on docs.neoagi.com.
-  `sites-docs.neoagi.com`'s deploy pulls from this branch specifically, not
-  `main`, so merging a PR into `main` doesn't publish anything by itself —
-  publishing is a separate, deliberate merge/fast-forward from `main` into
-  `release`.
 
-Both branches are meant to require review via CODEOWNERS before merging -
-see `CODEOWNERS`. (Branch protection rules themselves are configured in the
-repo's GitHub settings, not version-controlled here.)
+
