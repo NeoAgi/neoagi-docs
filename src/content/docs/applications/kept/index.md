@@ -1,6 +1,8 @@
 ---
 title: Kept
 description: How Kept handles your files, permissions, and privacy across Google Drive, OneDrive, and WebDAV.
+sidebar:
+  label: Overview
 ---
 
 Kept backs up your photos and files to a cloud storage provider you choose — Google Drive,
