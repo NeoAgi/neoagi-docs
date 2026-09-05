@@ -34,7 +34,13 @@ description: One line, used for <meta description> and search results.
 
 ## Branches
 
+Mirrors the staging/approval/release pattern used across the neoagi-infra-*
+terraform projects: one branch per environment, promoted in order.
+
 - **`main`** — where PRs land. Open one against this branch.
-- **`release`** — what's actually live on docs.neoagi.com.
+- **`alpha`** — synced by the alpha build of docs.neoagi.com. Promote here to
+  verify content before it ships.
+- **`production`** — synced by the production build. What's actually live on
+  docs.neoagi.com.
 
 
