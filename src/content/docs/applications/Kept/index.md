@@ -5,7 +5,7 @@ sidebar:
   label: Overview
 ---
 
-Kept backs up your photos and files to a cloud storage provider you choose — Google Drive,
+Kept backs up your photos and files to a cloud storage provider you choose: Google Drive,
 OneDrive, or your own WebDAV server. This page covers what Kept can and can't see, what it does
 with your credentials, and what (if anything) leaves your device besides the files you're
 backing up.
