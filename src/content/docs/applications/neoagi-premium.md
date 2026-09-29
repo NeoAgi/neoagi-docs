@@ -17,6 +17,12 @@ We didn't want to complicate access to our Family of Apps or discover how to met
 
 This is an introductory subscription that we're trying out and may change over time based on user feedback and usage.
 
+### Why a Subscription?
+
+We know subscriptions aren't everyone's favorite billing model.  They're simple and create a low bar to trial paid features without the sticker shock of full shrink wrapped software.  
+
+Something we will stirve to do is make the subscritpion worth while each and every month.  We don't want our subscription to become soemthing you pay for and forget to cancel, we want you to find value in all features so you continue to invest in us, so we can continue to iterate on makeing more features that increase value.  
+
 :::note[Get Involved]
 We're also considering single application licenses allowing a single time purchase for specific applications or features.
 
