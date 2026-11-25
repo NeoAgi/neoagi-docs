@@ -5,9 +5,39 @@ description: Release notes for NeoAgi applications and services.
 
 import { ReleaseCard, ReleaseItem } from "@components/releases";
 
+## November 24th, 2026
+
+<ReleaseCard App="NeoAgi.com" Version="2026.11.24">
+	<ReleaseItem Type="Policy">
+		Updated Terms of Service, EULA, and Privacy Policy to cover: <br />
+		- SMS will only be used after user consent, and only for transactional purposes <br />
+		  https://neoagi.com/agreements/tos#sms.<br />
+		- Geolocation data may be stored for InContext based on user activity (e.g. Saving "current location" in an item) but will never transmit in a way that tracks current location.<br />
+		  https://neoagi.com/agreements/privacy#inforetain<br />
+		- Clarified 30 days notice for arbitration notice<br />
+		  https://neoagi.com/agreements/tos#disputes<br />
+		- Privacy Policy now contains clauses specific to comply with CCPR/CRPA. <br />
+		  https://neoagi.com/agreements/privacy#caresidents
+	</ReleaseItem>
+</ReleaseCard>
+
+<ReleaseCard App="docs.neoagi.com" Version="2026.11.24">
+	<ReleaseItem Type="Maintenance">
+		Remediated security findings in dependencies.
+	</ReleaseItem>
+</ReleaseCard>
+
+## November 10th, 2026
+
+<ReleaseCard App="Kept" Version="0.2.18">
+	<ReleaseItem Type="Bugfix">
+		Addressed iOS 27 Crashing App on Launch
+	</ReleaseItem>
+</ReleaseCard>
+
 ## September 17th, 2026
 
-<ReleaseCard App="Kept" Version="1.1">
+<ReleaseCard App="Kept" Version="0.2.14">
 	<ReleaseItem Type="Feature">
 		Now collecting anonymous application metric data.  Can be disabled within Settings.
 	</ReleaseItem>
